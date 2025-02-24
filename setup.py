@@ -81,11 +81,6 @@ setup(
     # Only include the evo2 package; the vortex submodule is used for build purposes.
     packages=find_packages(include=["evo2", "vortex/vortex"]),
     install_requires=requirements,
-    cmdclass={
-        'build': CustomBuild,
-        'develop': CustomDevelop,
-        'bdist_wheel': CustomBDistWheel,
-    },
     package_data={'evo2': ['evo2/configs/*.yml']},
     include_package_data=True,
     python_requires='>=3.11',
